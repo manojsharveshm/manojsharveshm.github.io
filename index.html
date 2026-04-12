@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manoj Sharvesh M — Fintech · Asset Ops · Investor</title>
+<meta name="description" content="Manoj Sharvesh M — Asset Operations at BetterInvest, Chennai. Writing about fintech, alternative investments, invoice discounting, and building the future of finance in India.">
+<meta name="keywords" content="Manoj Sharvesh M, BetterInvest, fintech, alternative investments, asset operations, invoice discounting, loan disbursement, Chennai, finance blog">
+<meta name="author" content="Manoj Sharvesh M">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://manojsharveshm.github.io/">
+
+<!-- Google Search Console Verification — REPLACE content value with your actual code -->
+<meta name="google-site-verification" content="PASTE_YOUR_GOOGLE_VERIFICATION_CODE_HERE">
+
+<!-- Open Graph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Manoj Sharvesh M — Fintech · Asset Ops · Investor">
+<meta property="og:description" content="Asset Operations at BetterInvest. Writing about fintech, alternative investments, and the future of finance in India.">
+<meta property="og:url" content="https://manojsharveshm.github.io/">
+<meta property="og:site_name" content="Manoj Sharvesh M">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Manoj Sharvesh M — Fintech · Asset Ops · Investor">
+<meta name="twitter:description" content="Asset Operations at BetterInvest. Writing about fintech, alternative investments, and the future of finance in India.">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Manoj Sharvesh M",
+  "url": "https://manojsharveshm.github.io",
+  "jobTitle": "Business Associate - Asset Operations",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "BetterInvest",
+    "url": "https://www.betterinvest.club"
+  },
+  "alumniOf": "Sri Krishna Arts and Science College",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Chennai",
+    "addressRegion": "Tamil Nadu",
+    "addressCountry": "IN"
+  },
+  "sameAs": [
+    "https://www.crunchbase.com/person/manoj-sharvesh-m",
+    "https://manojsharvesh.blogspot.com/",
+    "https://sites.google.com/view/manojsharvesh"
+  ]
+}
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0c0b09;
+  --surface: #161412;
+  --surface-2: #1e1b17;
+  --border: #2a2520;
+  --text: #e8e0d4;
+  --text-muted: #8a7e6e;
+  --accent: #d4763a;
+  --accent-soft: rgba(212,118,58,0.12);
+  --accent-glow: #e8914f;
+  --white: #faf6f0;
+  --serif: 'Instrument Serif', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
+  --max-w: 1120px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--accent-glow); }
+
+/* ─── NAV ─── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(12,11,9,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  color: var(--white);
+  letter-spacing: -0.5px;
+}
+
+.nav-logo span { color: var(--accent); }
+
+.nav-links { display: flex; gap: 32px; align-items: center; }
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active { color: var(--white); }
+
+.nav-cta {
+  background: var(--accent) !important;
+  color: var(--bg) !important;
+  padding: 8px 20px !important;
+  border-radius: 6px;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-size: 13px !important;
+}
+
+/* Mobile menu */
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; transition: 0.3s; }
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 40px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(212,118,58,0.08) 0%, transparent 60%);
+  border-radius: 50%;
+  animation: float 12s ease-in-out infinite;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(212,118,58,0.04) 0%, transparent 60%);
+  border-radius: 50%;
+  animation: float 15s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, -30px) scale(1.05); }
+}
+
+.hero-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: fadeUp 0.7s var(--ease) 0.2s forwards;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 6.5vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--white);
+  max-width: 800px;
+  opacity: 0;
+  animation: fadeUp 0.7s var(--ease) 0.35s forwards;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.hero-desc {
+  margin-top: 28px;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  line-height: 1.7;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeUp 0.7s var(--ease) 0.5s forwards;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  margin-top: 56px;
+  opacity: 0;
+  animation: fadeUp 0.7s var(--ease) 0.65s forwards;
+}
+
+.hero-stat-num {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  color: var(--white);
+  display: block;
+  line-height: 1;
+}
+
+.hero-stat-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 6px;
+  display: block;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── SECTION HEADERS ─── */
+section { padding: 100px 40px; }
+
+.section-header {
+  max-width: var(--max-w);
+  margin: 0 auto 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.section-header h2 {
+  font-family: var(--serif);
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: var(--white);
+}
+
+.section-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.view-all {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 10px 22px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.view-all:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ─── BLOG CARDS ─── */
+#blog { border-top: 1px solid var(--border); }
+
+.blog-grid {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 28px;
+}
+
+.blog-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 32px 28px 28px;
+  transition: transform 0.3s var(--ease), border-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+}
+
+.card-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 4px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 16px;
+  width: fit-content;
+}
+
+.blog-card h3 {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.blog-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.card-date {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.card-read {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+}
+
+/* ─── ABOUT STRIP ─── */
+#about { border-top: 1px solid var(--border); }
+
+.about-grid {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.about-left h3 {
+  font-family: var(--serif);
+  font-size: 2rem;
+  color: var(--white);
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.about-left p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.about-right { display: flex; flex-direction: column; gap: 20px; }
+
+.exp-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  transition: border-color 0.2s;
+}
+
+.exp-card:hover { border-color: var(--accent); }
+
+.exp-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.exp-info h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.exp-info .exp-company {
+  font-size: 13px;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.exp-info .exp-period {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+/* ─── SKILLS STRIP ─── */
+.skills-strip {
+  max-width: var(--max-w);
+  margin: 56px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-pill {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 16px;
+  border-radius: 100px;
+  transition: all 0.2s;
+}
+
+.skill-pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* ─── CONTACT ─── */
+#contact {
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.contact-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-inner h2 {
+  font-family: var(--serif);
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.contact-inner p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.contact-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.25s;
+  background: var(--surface);
+}
+
+.contact-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.contact-btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+.contact-btn.primary:hover {
+  background: var(--accent-glow);
+  color: var(--bg);
+}
+
+/* ─── FOOTER ─── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 40px;
+  text-align: center;
+}
+
+footer p {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+footer .footer-links {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+footer .footer-links a {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  nav { padding: 16px 20px; }
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 20px;
+    gap: 16px;
+  }
+  .hero { padding: 100px 20px 60px; }
+  .hero-stats { gap: 28px; }
+  section { padding: 64px 20px; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .section-header h2 { font-size: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Manoj<span>.</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="#" class="active">Home</a>
+    <a href="#blog">Blog</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="https://manojsharvesh.blogspot.com/" target="_blank">Archive</a>
+    <a href="#contact" class="nav-cta">Let's Talk</a>
+  </div>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-label">Fintech · Asset Operations · Alternative Investments</div>
+    <h1>Building the future of <em>finance,</em> one asset at a time.</h1>
+    <p class="hero-desc">Asset Operations at BetterInvest — streamlining loan disbursement, invoice discounting, and investment workflows in India's booming alternative investment ecosystem.</p>
+    <div class="hero-stats">
+      <div>
+        <span class="hero-stat-num">₹358Cr+</span>
+        <span class="hero-stat-label">Platform Investments</span>
+      </div>
+      <div>
+        <span class="hero-stat-num">115+</span>
+        <span class="hero-stat-label">Deals Financed</span>
+      </div>
+      <div>
+        <span class="hero-stat-num">37+</span>
+        <span class="hero-stat-label">Production Houses</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="section-header">
+    <div>
+      <div class="section-label">Latest Thinking</div>
+      <h2>Blog</h2>
+    </div>
+    <a href="https://manojsharvesh.blogspot.com/" target="_blank" class="view-all">View Archive →</a>
+  </div>
+
+  <div class="blog-grid">
+    <div class="blog-card" onclick="window.open('blog-ai-reshaping-alternative-investments.html','_self')">
+      <div class="card-tag">Fintech × AI</div>
+      <h3>AI is Eating Alternative Investments — And That's a Good Thing</h3>
+      <p>How agentic AI, real-time data, and fractional platforms are rewriting asset operations in India's ₹33 lakh crore alt-investment ecosystem.</p>
+      <div class="card-footer">
+        <span class="card-date">Apr 2026</span>
+        <span class="card-read">7 min read →</span>
+      </div>
+    </div>
+
+    <div class="blog-card" onclick="window.open('https://manojsharvesh.blogspot.com/2025/08/automation-isnt-optional-its.html','_blank')">
+      <div class="card-tag">Operations</div>
+      <h3>Automation Isn't Optional — It's Infrastructure</h3>
+      <p>Why every fintech ops team must treat automation as core infrastructure, not a nice-to-have. Lessons from the trenches of asset management.</p>
+      <div class="card-footer">
+        <span class="card-date">Aug 2025</span>
+        <span class="card-read">5 min read →</span>
+      </div>
+    </div>
+
+    <div class="blog-card" onclick="window.open('https://manojsharvesh.blogspot.com/2025/04/ultimate-guide-to-startup-funding-stages.html','_blank')">
+      <div class="card-tag">Startups</div>
+      <h3>The Ultimate Guide to Startup Funding Stages</h3>
+      <p>From pre-seed to IPO — a comprehensive breakdown of every funding round, what investors look for, and how to position your startup.</p>
+      <div class="card-footer">
+        <span class="card-date">Apr 2025</span>
+        <span class="card-read">8 min read →</span>
+      </div>
+    </div>
+
+    <div class="blog-card" onclick="window.open('https://manojsharvesh.blogspot.com/2025/04/what-is-invoice-discounting-meaning.html','_blank')">
+      <div class="card-tag">Finance</div>
+      <h3>What is Invoice Discounting? Meaning, Process, and Benefits</h3>
+      <p>Demystifying invoice discounting for content producers and SMEs — how future receivables become working capital today.</p>
+      <div class="card-footer">
+        <span class="card-date">Apr 2025</span>
+        <span class="card-read">6 min read →</span>
+      </div>
+    </div>
+
+    <div class="blog-card" onclick="window.open('https://manojsharvesh.blogspot.com/2024/03/replace-swot-with-so-st-wo-wt.html','_blank')">
+      <div class="card-tag">Strategy</div>
+      <h3>Replace SWOT with SO ST WO WT!</h3>
+      <p>A smarter framework for strategic analysis that goes beyond the classic four quadrants. Actionable, cross-referenced, and outcome-driven.</p>
+      <div class="card-footer">
+        <span class="card-date">Mar 2024</span>
+        <span class="card-read">4 min read →</span>
+      </div>
+    </div>
+
+    <div class="blog-card" onclick="window.open('https://manojsharvesh.blogspot.com/2023/12/marketing-and-market-research-essentials.html','_blank')">
+      <div class="card-tag">Marketing</div>
+      <h3>Marketing and Market Research Essentials</h3>
+      <p>Core frameworks for understanding your market, building personas, and crafting positioning that resonates with real customers.</p>
+      <div class="card-footer">
+        <span class="card-date">Dec 2023</span>
+        <span class="card-read">5 min read →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header">
+    <div>
+      <div class="section-label">Who I Am</div>
+      <h2>About</h2>
+    </div>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-left">
+      <h3>Finance by training, fintech by obsession.</h3>
+      <p>I'm Manoj Sharvesh M — currently a Business Associate at BetterInvest, a Chennai-based alternative investment platform that funds movies, web series, and content through invoice discounting and revenue-based financing.</p>
+      <p>My day-to-day revolves around asset operations: loan disbursements, portfolio tracking, receivable management, and building systems that make alternative investments accessible to retail investors.</p>
+      <p>Before BetterInvest, I worked across Flipkart, JSW Steel India, and completed virtual programs at JP Morgan and Goldman Sachs. I hold a B.Com in Banking & Insurance from Sri Krishna Arts and Science College, and certifications including IIBF Diploma in Banking & Finance and NISM Mutual Fund Distribution.</p>
+      <p>I write about fintech, investment research, and the intersection of technology and finance. Always learning, always building.</p>
+    </div>
+
+    <div class="about-right">
+      <div class="exp-card">
+        <div class="exp-icon">🏦</div>
+        <div class="exp-info">
+          <h4>Business Associate — Asset Operations</h4>
+          <div class="exp-company">BetterInvest</div>
+          <div class="exp-period">2025 — Present · Chennai</div>
+        </div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-icon">📦</div>
+        <div class="exp-info">
+          <h4>Senior Assistant</h4>
+          <div class="exp-company">Flipkart</div>
+          <div class="exp-period">Previous Role</div>
+        </div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-icon">🏗️</div>
+        <div class="exp-info">
+          <h4>Finance Analyst & Intern</h4>
+          <div class="exp-company">JSW Steel India</div>
+          <div class="exp-period">Previous Role</div>
+        </div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-icon">📊</div>
+        <div class="exp-info">
+          <h4>Virtual Experience Programs</h4>
+          <div class="exp-company">JP Morgan & Goldman Sachs</div>
+          <div class="exp-period">Completed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills-strip">
+    <span class="skill-pill">Asset Operations</span>
+    <span class="skill-pill">Loan Disbursement</span>
+    <span class="skill-pill">Invoice Discounting</span>
+    <span class="skill-pill">Investment Research</span>
+    <span class="skill-pill">Data Analytics</span>
+    <span class="skill-pill">Financial Modeling</span>
+    <span class="skill-pill">SAP S/4HANA</span>
+    <span class="skill-pill">NISM Certified</span>
+    <span class="skill-pill">IIBF Banking Diploma</span>
+    <span class="skill-pill">CRM Dashboards</span>
+    <span class="skill-pill">Revenue Based Financing</span>
+    <span class="skill-pill">Alt Investments</span>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="section-label">Get In Touch</div>
+    <h2>Let's connect.</h2>
+    <p>Whether it's a conversation about fintech, alternative investments, content financing, or just swapping ideas — I'm always up for it.</p>
+    <div class="contact-links">
+      <a href="/cdn-cgi/l/email-protection#8be6eae5e4e1cbe9eeffffeef9e2e5fdeef8ffa5e8e7fee9" class="contact-btn primary">✉ Email Me</a>
+      <a href="https://www.crunchbase.com/person/manoj-sharvesh-m" target="_blank" class="contact-btn">Crunchbase</a>
+      <a href="https://manojsharvesh.blogspot.com/" target="_blank" class="contact-btn">Blogger</a>
+      <a href="https://sites.google.com/view/manojsharvesh" target="_blank" class="contact-btn">Google Site</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Manoj Sharvesh M · Made with intention, not a template.</p>
+  <div class="footer-links">
+    <a href="#blog">Blog</a>
+    <a href="#about">About</a>
+    <a href="#contact">Co
