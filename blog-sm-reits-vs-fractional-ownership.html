@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SM REITs vs Fractional Ownership:<br><em>What Actually Changed in 2026?</em></title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a1712;--paper:#faf6f0;--accent:#c45d2c;--accent-glow:#e8713a;--muted:#8a7e6e;--divider:#d6cdbf;--highlight:#fff3e0;--tag-bg:#2d2520;--tag-text:#f0e6d8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;line-height:1.78;font-size:18px;-webkit-font-smoothing:antialiased}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:flex-end;padding:6vw 8vw 8vw;position:relative;overflow:hidden;background:linear-gradient(165deg,#1a1712 0%,#2d2520 40%,#3e2f24 100%)}
+.hero::before{content:'';position:absolute;top:-30%;right:-20%;width:80vw;height:80vw;border-radius:50%;background:radial-gradient(circle,rgba(196,93,44,0.15) 0%,transparent 70%);animation:pulse 8s ease-in-out infinite}
+.hero::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.05);opacity:1}}
+.hero-meta{position:relative;z-index:2;display:flex;align-items:center;gap:16px;margin-bottom:28px;animation:fadeUp .8s ease both .2s}
+.hero-tag{background:var(--accent);color:#fff;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:3px}
+.hero-date{color:rgba(255,255,255,.45);font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px}
+.hero h1{position:relative;z-index:2;font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(2.4rem,5vw,4.2rem);line-height:1.1;color:#fff;max-width:780px;animation:fadeUp .8s ease both .4s}
+.hero h1 em{color:var(--accent-glow);font-style:italic}
+.hero-sub{position:relative;z-index:2;margin-top:24px;font-size:1.1rem;color:rgba(255,255,255,.5);max-width:560px;font-weight:300;animation:fadeUp .8s ease both .6s}
+.hero-author{position:relative;z-index:2;margin-top:36px;display:flex;align-items:center;gap:14px;animation:fadeUp .8s ease both .8s}
+.author-avatar{width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.15)}
+.author-avatar img{width:100%;height:100%;object-fit:cover}
+.author-info{color:rgba(255,255,255,.7);font-size:14px}
+.author-info strong{color:#fff;font-weight:600;display:block;font-size:15px}
+.author-info span{font-size:12px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;letter-spacing:.5px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.article-body{max-width:700px;margin:0 auto;padding:68px 24px 100px}
+.article-body h2{font-family:'Playfair Display',serif;font-weight:700;font-size:1.8rem;margin-top:52px;margin-bottom:18px;line-height:1.2;position:relative;padding-left:22px}
+.article-body h2::before{content:'';position:absolute;left:0;top:6px;width:4px;height:26px;background:var(--accent);border-radius:2px}
+.article-body p{margin-bottom:20px;font-weight:400}
+.article-body p:first-of-type::first-letter{font-family:'Playfair Display',serif;font-size:4rem;float:left;line-height:.8;margin-right:10px;margin-top:6px;color:var(--accent);font-weight:900}
+.pullquote{margin:44px -20px;padding:30px 34px;border-left:4px solid var(--accent);background:var(--highlight);font-family:'Playfair Display',serif;font-size:1.3rem;font-style:italic;line-height:1.5;color:#3a3024;border-radius:0 8px 8px 0;position:relative}
+.pullquote::before{content:'"';font-size:5rem;color:var(--accent);opacity:.2;position:absolute;top:-10px;left:16px;font-family:'Playfair Display',serif}
+.section-break{text-align:center;margin:48px 0;font-size:20px;letter-spacing:16px;color:var(--divider)}
+.back-link{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-bottom:40px;transition:color .2s}
+.back-link:hover{color:var(--accent)}
+.article-footer{max-width:700px;margin:0 auto;padding:0 24px 60px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--divider);padding-top:24px;flex-wrap:wrap;gap:16px}
+.footer-tags{display:flex;gap:8px;flex-wrap:wrap}
+.footer-tag{background:transparent;border:1px solid var(--divider);color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:11px;padding:5px 12px;border-radius:20px;letter-spacing:.5px}
+.reading-time{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:.5px}
+@media(max-width:640px){.hero{padding:8vw 6vw 10vw;min-height:75vh}.article-body{padding:44px 20px 72px}.pullquote{margin:36px 0;padding:24px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-meta">
+    <span class="hero-tag">Alt Investments</span>
+    <span class="hero-date">APR 2026</span>
+  </div>
+  <h1>SM REITs vs Fractional Ownership:<br><em>What Actually Changed in 2026?</em></h1>
+  <p class="hero-sub">SEBI's new SM REIT framework is forcing India's fractional ownership platforms to either regulate or consolidate. Here's what it means for retail investors.</p>
+  <div class="hero-author">
+    <div class="author-avatar"><img src="photo.png" alt="Manoj Sharvesh M"></div>
+    <div class="author-info">
+      <strong>Manoj Sharvesh M</strong>
+      <span>Asset Operations · BetterInvest, Chennai</span>
+    </div>
+  </div>
+</header>
+<article class="article-body">
+  <a href="index.html" class="back-link">← Back to home</a>
+
+  <p>Something significant shifted in India's alternative investment landscape this year, and most retail investors haven't fully registered it yet. SEBI's Small and Medium REIT framework — quietly introduced and now actively enforced — is redrawing the lines between what counts as fractional real estate ownership and what qualifies as a regulated investment product.</p>
+
+  <p>The distinction matters more than you'd think. For years, fractional ownership platforms operated in a grey zone — pooling investor money through SPVs to buy commercial assets, distributing rental yields, and calling it "democratized real estate." It worked. Investors got 8-11% yields on Grade A office space they could never afford individually. Platforms got their fee structures. Everyone was happy.</p>
+
+  <p>Then SEBI stepped in.</p>
+
+  <h2>What SM REITs Actually Require</h2>
+
+  <p>The new framework mandates that platforms meeting certain thresholds must register as SM REITs. This means mandatory listing on stock exchanges, a minimum of 200 unrelated investors per scheme, assets valued between ₹50 crore and ₹500 crore, and distribution of at least 95% of net cash flows to unitholders.</p>
+
+  <p>That last point is the one that changes the game. In the old SPV model, platforms had discretion over distributions, timing, and reinvestment. Under SM REITs, the cash flows are ring-fenced and transparent. Every rupee is accounted for.</p>
+
+  <div class="pullquote">The biggest shift isn't regulation itself — it's liquidity. SPV investors had to wait for platform-mediated exits. SM REIT unitholders can trade on the exchange. That changes the entire risk calculus.</div>
+
+  <h2>The Migration Problem</h2>
+
+  <p>Here's where it gets complicated. SEBI has effectively set a mid-2026 deadline for existing fractional platforms to either migrate to the SM REIT framework or wind down non-compliant schemes. The requirement? A net worth of ₹20 crore, robust compliance infrastructure, and the operational capacity to handle exchange-listed securities.</p>
+
+  <p>Not every platform will make it. The ones that do will emerge stronger — with institutional credibility, better liquidity for investors, and access to a broader capital base. The ones that don't will likely consolidate or liquidate. For investors currently holding positions in SPV-based fractional deals, this is the moment to ask hard questions about your platform's migration timeline.</p>
+
+  <h2>What This Means for Retail Investors</h2>
+
+  <p>If you're a retail investor considering fractional real estate for the first time, 2026 is actually a good entry point — provided you pick the right vehicle. SM REITs offer something fractional SPVs never could: regulated transparency and exchange liquidity. You're no longer betting on a platform's goodwill for your exit.</p>
+
+  <p>But the yields aren't guaranteed to be higher. Traditional REITs in India report 5-7% yields. SM REITs, focusing on single commercial assets, may offer higher gross yields but with concentrated risk. You're owning a piece of one building, not a diversified portfolio.</p>
+
+  <p>The smart move? Understand what you're actually buying. A fractional stake in a pre-leased IT park in Whitefield is a fundamentally different risk profile from a diversified REIT holding across five cities. Neither is inherently better — they serve different portfolio functions.</p>
+
+  <div class="section-break">◆ ◆ ◆</div>
+
+  <p>The bottom line is this: SEBI's intervention isn't killing fractional ownership. It's forcing it to grow up. The platforms that survive the migration will be stronger, more transparent, and better for investors. The era of unregulated pooling into opaque SPVs is ending — and that's probably a good thing for everyone involved.</p>
+
+  <p style="font-size:14px;color:var(--muted);text-align:center;margin-top:40px;font-style:italic;">Manoj Sharvesh M writes about fintech, alternative investments, and the systems that make finance work. Based in Chennai.</p>
+
+</article>
+<footer class="article-footer">
+  <div class="footer-tags">
+    <span class="footer-tag">#SMREITs</span><span class="footer-tag">#FractionalOwnership</span><span class="footer-tag">#SEBI</span><span class="footer-tag">#AltInvestments</span><span class="footer-tag">#RealEstate</span>
+  </div>
+  <span class="reading-time">6 min read</span>
+</footer>
+</body>
+</html>

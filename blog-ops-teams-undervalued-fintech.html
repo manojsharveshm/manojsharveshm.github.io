@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Ops Teams Are the Most<br><em>Undervalued Asset in Fintech</em></title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a1712;--paper:#faf6f0;--accent:#c45d2c;--accent-glow:#e8713a;--muted:#8a7e6e;--divider:#d6cdbf;--highlight:#fff3e0;--tag-bg:#2d2520;--tag-text:#f0e6d8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;line-height:1.78;font-size:18px;-webkit-font-smoothing:antialiased}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:flex-end;padding:6vw 8vw 8vw;position:relative;overflow:hidden;background:linear-gradient(165deg,#1a1712 0%,#2d2520 40%,#3e2f24 100%)}
+.hero::before{content:'';position:absolute;top:-30%;right:-20%;width:80vw;height:80vw;border-radius:50%;background:radial-gradient(circle,rgba(196,93,44,0.15) 0%,transparent 70%);animation:pulse 8s ease-in-out infinite}
+.hero::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.05);opacity:1}}
+.hero-meta{position:relative;z-index:2;display:flex;align-items:center;gap:16px;margin-bottom:28px;animation:fadeUp .8s ease both .2s}
+.hero-tag{background:var(--accent);color:#fff;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:3px}
+.hero-date{color:rgba(255,255,255,.45);font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px}
+.hero h1{position:relative;z-index:2;font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(2.4rem,5vw,4.2rem);line-height:1.1;color:#fff;max-width:780px;animation:fadeUp .8s ease both .4s}
+.hero h1 em{color:var(--accent-glow);font-style:italic}
+.hero-sub{position:relative;z-index:2;margin-top:24px;font-size:1.1rem;color:rgba(255,255,255,.5);max-width:560px;font-weight:300;animation:fadeUp .8s ease both .6s}
+.hero-author{position:relative;z-index:2;margin-top:36px;display:flex;align-items:center;gap:14px;animation:fadeUp .8s ease both .8s}
+.author-avatar{width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.15)}
+.author-avatar img{width:100%;height:100%;object-fit:cover}
+.author-info{color:rgba(255,255,255,.7);font-size:14px}
+.author-info strong{color:#fff;font-weight:600;display:block;font-size:15px}
+.author-info span{font-size:12px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;letter-spacing:.5px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.article-body{max-width:700px;margin:0 auto;padding:68px 24px 100px}
+.article-body h2{font-family:'Playfair Display',serif;font-weight:700;font-size:1.8rem;margin-top:52px;margin-bottom:18px;line-height:1.2;position:relative;padding-left:22px}
+.article-body h2::before{content:'';position:absolute;left:0;top:6px;width:4px;height:26px;background:var(--accent);border-radius:2px}
+.article-body p{margin-bottom:20px;font-weight:400}
+.article-body p:first-of-type::first-letter{font-family:'Playfair Display',serif;font-size:4rem;float:left;line-height:.8;margin-right:10px;margin-top:6px;color:var(--accent);font-weight:900}
+.pullquote{margin:44px -20px;padding:30px 34px;border-left:4px solid var(--accent);background:var(--highlight);font-family:'Playfair Display',serif;font-size:1.3rem;font-style:italic;line-height:1.5;color:#3a3024;border-radius:0 8px 8px 0;position:relative}
+.pullquote::before{content:'"';font-size:5rem;color:var(--accent);opacity:.2;position:absolute;top:-10px;left:16px;font-family:'Playfair Display',serif}
+.section-break{text-align:center;margin:48px 0;font-size:20px;letter-spacing:16px;color:var(--divider)}
+.back-link{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-bottom:40px;transition:color .2s}
+.back-link:hover{color:var(--accent)}
+.article-footer{max-width:700px;margin:0 auto;padding:0 24px 60px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--divider);padding-top:24px;flex-wrap:wrap;gap:16px}
+.footer-tags{display:flex;gap:8px;flex-wrap:wrap}
+.footer-tag{background:transparent;border:1px solid var(--divider);color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:11px;padding:5px 12px;border-radius:20px;letter-spacing:.5px}
+.reading-time{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:.5px}
+@media(max-width:640px){.hero{padding:8vw 6vw 10vw;min-height:75vh}.article-body{padding:44px 20px 72px}.pullquote{margin:36px 0;padding:24px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-meta">
+    <span class="hero-tag">Operations</span>
+    <span class="hero-date">MAR 2026</span>
+  </div>
+  <h1>Why Ops Teams Are the Most<br><em>Undervalued Asset in Fintech</em></h1>
+  <p class="hero-sub">Product gets the headlines. Growth gets the funding. But ops is what keeps the money moving — and nobody talks about it enough.</p>
+  <div class="hero-author">
+    <div class="author-avatar"><img src="photo.png" alt="Manoj Sharvesh M"></div>
+    <div class="author-info">
+      <strong>Manoj Sharvesh M</strong>
+      <span>Asset Operations · BetterInvest, Chennai</span>
+    </div>
+  </div>
+</header>
+<article class="article-body">
+  <a href="index.html" class="back-link">← Back to home</a>
+
+  <p>There's a strange hierarchy in fintech. Product teams get profiled in tech blogs. Growth teams get celebrated at board meetings. Engineering teams get the swag budgets. And then there's operations — the team that actually makes sure money moves from point A to point B without anything breaking.</p>
+
+  <p>Nobody writes blog posts about ops. Nobody tweets about their disbursement workflow. And yet, when ops breaks, everything breaks. A delayed disbursement doesn't just create a reconciliation headache — it erodes the trust that took months to build with an investor or a content producer waiting on funds.</p>
+
+  <h2>The Invisible Infrastructure</h2>
+
+  <p>In lending and alternative investment platforms, ops sits at the intersection of every function. Compliance needs ops to verify KYC before onboarding. Finance needs ops to reconcile every inflow and outflow. Product needs ops to flag edge cases that the system doesn't handle. Investors need ops to answer the question they actually care about: "Where is my money?"</p>
+
+  <p>The problem is that ops work is inherently invisible when done well. Nobody notices that 200 disbursements went out on time today. Everyone notices when one doesn't.</p>
+
+  <div class="pullquote">Good ops is like good plumbing — you only think about it when something leaks. But try building a house without it.</div>
+
+  <h2>Why Fintech Ops Is Different</h2>
+
+  <p>Traditional financial services ops is procedural — follow the checklist, file the report, escalate exceptions. Fintech ops is fundamentally different because the systems are still being built. There is no established playbook for disbursing funds against entertainment receivables or tracking repayments across 40 different production houses simultaneously.</p>
+
+  <p>Fintech ops people aren't just following processes — they're designing them. Every new deal structure, every new asset class, every regulatory update requires the ops layer to adapt. And because most early-stage fintechs don't have the luxury of dedicated process engineering teams, it's the ops person who figures out how to make it work.</p>
+
+  <h2>The Automation Paradox</h2>
+
+  <p>There's a common assumption that automation will eventually replace ops teams. It won't — at least not in the way people think. Automation handles the repetitive parts: generating documents, sending status updates, flagging overdue payments. But the judgment calls — deciding whether to escalate a delayed repayment, navigating a regulatory grey area, managing a relationship when things go sideways — those require human context that no workflow engine can replicate.</p>
+
+  <p>The best fintech ops teams use automation to free up time for the decisions that actually matter. The worst ones drown in spreadsheets and never get to the strategic work.</p>
+
+  <div class="section-break">◆ ◆ ◆</div>
+
+  <h2>What Needs to Change</h2>
+
+  <p>Three things. First, ops needs a seat at the product table. Too many features ship without ops input, creating downstream chaos that takes weeks to untangle. Second, ops metrics need visibility at the leadership level — not just "tickets closed" but "disbursement accuracy," "reconciliation speed," and "investor query resolution time." Third, ops careers need a real growth path. Right now, the best ops people either move into product or leave for consulting. That's a loss for the entire ecosystem.</p>
+
+  <p>Fintech is still young enough that these patterns aren't set in stone. The companies that figure out how to value, develop, and retain ops talent will have a structural advantage over those that treat it as a cost center to be minimized.</p>
+
+  <p style="font-size:14px;color:var(--muted);text-align:center;margin-top:40px;font-style:italic;">Manoj Sharvesh M writes about fintech, alternative investments, and the systems that make finance work. Based in Chennai.</p>
+
+</article>
+<footer class="article-footer">
+  <div class="footer-tags">
+    <span class="footer-tag">#FintechOps</span><span class="footer-tag">#Operations</span><span class="footer-tag">#Startups</span><span class="footer-tag">#Fintech</span><span class="footer-tag">#Career</span>
+  </div>
+  <span class="reading-time">5 min read</span>
+</footer>
+</body>
+</html>

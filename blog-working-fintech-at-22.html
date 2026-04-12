@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What I Wish Someone Told Me About<br><em>Working in Fintech at 22</em></title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a1712;--paper:#faf6f0;--accent:#c45d2c;--accent-glow:#e8713a;--muted:#8a7e6e;--divider:#d6cdbf;--highlight:#fff3e0;--tag-bg:#2d2520;--tag-text:#f0e6d8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;line-height:1.78;font-size:18px;-webkit-font-smoothing:antialiased}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:flex-end;padding:6vw 8vw 8vw;position:relative;overflow:hidden;background:linear-gradient(165deg,#1a1712 0%,#2d2520 40%,#3e2f24 100%)}
+.hero::before{content:'';position:absolute;top:-30%;right:-20%;width:80vw;height:80vw;border-radius:50%;background:radial-gradient(circle,rgba(196,93,44,0.15) 0%,transparent 70%);animation:pulse 8s ease-in-out infinite}
+.hero::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.05);opacity:1}}
+.hero-meta{position:relative;z-index:2;display:flex;align-items:center;gap:16px;margin-bottom:28px;animation:fadeUp .8s ease both .2s}
+.hero-tag{background:var(--accent);color:#fff;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:3px}
+.hero-date{color:rgba(255,255,255,.45);font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px}
+.hero h1{position:relative;z-index:2;font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(2.4rem,5vw,4.2rem);line-height:1.1;color:#fff;max-width:780px;animation:fadeUp .8s ease both .4s}
+.hero h1 em{color:var(--accent-glow);font-style:italic}
+.hero-sub{position:relative;z-index:2;margin-top:24px;font-size:1.1rem;color:rgba(255,255,255,.5);max-width:560px;font-weight:300;animation:fadeUp .8s ease both .6s}
+.hero-author{position:relative;z-index:2;margin-top:36px;display:flex;align-items:center;gap:14px;animation:fadeUp .8s ease both .8s}
+.author-avatar{width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.15)}
+.author-avatar img{width:100%;height:100%;object-fit:cover}
+.author-info{color:rgba(255,255,255,.7);font-size:14px}
+.author-info strong{color:#fff;font-weight:600;display:block;font-size:15px}
+.author-info span{font-size:12px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;letter-spacing:.5px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.article-body{max-width:700px;margin:0 auto;padding:68px 24px 100px}
+.article-body h2{font-family:'Playfair Display',serif;font-weight:700;font-size:1.8rem;margin-top:52px;margin-bottom:18px;line-height:1.2;position:relative;padding-left:22px}
+.article-body h2::before{content:'';position:absolute;left:0;top:6px;width:4px;height:26px;background:var(--accent);border-radius:2px}
+.article-body p{margin-bottom:20px;font-weight:400}
+.article-body p:first-of-type::first-letter{font-family:'Playfair Display',serif;font-size:4rem;float:left;line-height:.8;margin-right:10px;margin-top:6px;color:var(--accent);font-weight:900}
+.pullquote{margin:44px -20px;padding:30px 34px;border-left:4px solid var(--accent);background:var(--highlight);font-family:'Playfair Display',serif;font-size:1.3rem;font-style:italic;line-height:1.5;color:#3a3024;border-radius:0 8px 8px 0;position:relative}
+.pullquote::before{content:'"';font-size:5rem;color:var(--accent);opacity:.2;position:absolute;top:-10px;left:16px;font-family:'Playfair Display',serif}
+.section-break{text-align:center;margin:48px 0;font-size:20px;letter-spacing:16px;color:var(--divider)}
+.back-link{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-bottom:40px;transition:color .2s}
+.back-link:hover{color:var(--accent)}
+.article-footer{max-width:700px;margin:0 auto;padding:0 24px 60px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--divider);padding-top:24px;flex-wrap:wrap;gap:16px}
+.footer-tags{display:flex;gap:8px;flex-wrap:wrap}
+.footer-tag{background:transparent;border:1px solid var(--divider);color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:11px;padding:5px 12px;border-radius:20px;letter-spacing:.5px}
+.reading-time{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:.5px}
+@media(max-width:640px){.hero{padding:8vw 6vw 10vw;min-height:75vh}.article-body{padding:44px 20px 72px}.pullquote{margin:36px 0;padding:24px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-meta">
+    <span class="hero-tag">Career</span>
+    <span class="hero-date">DEC 2025</span>
+  </div>
+  <h1>What I Wish Someone Told Me About<br><em>Working in Fintech at 22</em></h1>
+  <p class="hero-sub">No MBA playbook prepares you for the pace, ambiguity, and builder mindset that early-stage fintech demands. Some honest reflections.</p>
+  <div class="hero-author">
+    <div class="author-avatar"><img src="photo.png" alt="Manoj Sharvesh M"></div>
+    <div class="author-info">
+      <strong>Manoj Sharvesh M</strong>
+      <span>Asset Operations · BetterInvest, Chennai</span>
+    </div>
+  </div>
+</header>
+<article class="article-body">
+  <a href="index.html" class="back-link">← Back to home</a>
+
+  <p>Nobody tells you that your first week at a fintech startup will involve simultaneously learning a new asset class, figuring out a spreadsheet someone built three iterations ago, and being on a call with an investor who assumes you've been doing this for years. You nod along, take notes, and Google things furiously during lunch.</p>
+
+  <p>That's not a complaint — it's the reality of working in early-stage finance, and honestly, it's the most accelerated learning environment I can imagine. But it would have helped to know a few things going in.</p>
+
+  <h2>The Pace Is the Product</h2>
+
+  <p>In a large company, your first six months are orientation. In a fintech startup, your first six months are a full career compressed. You'll touch operations, compliance, investor relations, product feedback, and probably some things that don't have a name yet because the company is too small for formal job descriptions.</p>
+
+  <p>This is disorienting at first. You spent four years in college learning theory, and suddenly you're in a world where the theory is being invented in real time. Invoice discounting for entertainment assets? There's no textbook chapter on that. You learn by doing, by asking questions that feel stupid, and by making mistakes that hopefully aren't expensive.</p>
+
+  <div class="pullquote">The most valuable skill in early-stage fintech isn't any technical expertise — it's the ability to figure things out without a manual. Comfort with ambiguity isn't a nice-to-have; it's the job description.</div>
+
+  <h2>Nobody Cares About Your Degree</h2>
+
+  <p>This sounds harsh, but it's actually liberating. In the first month, your B.Com or MBA matters for getting through the door. After that, what matters is whether you can build a tracker that actually works, communicate clearly with investors, and flag a problem before it becomes a crisis. Credentials are a starting point, not a ceiling.</p>
+
+  <p>The corollary is that learning never stops. Every new deal structure, every regulatory update, every product decision is a mini-education. The people who thrive in fintech are the ones who stay curious even when the daily work feels repetitive. The ones who struggle are the ones waiting for someone to teach them.</p>
+
+  <h2>Relationships Are Infrastructure</h2>
+
+  <p>In college, networking felt transactional — collect LinkedIn connections, attend events, exchange cards. In a working fintech, relationships are genuinely foundational. The production house CFO who trusts you enough to flag a delay early. The investor who calls you directly instead of sending an angry email. The colleague who explains the regulatory nuance you missed.</p>
+
+  <p>These relationships don't build overnight, and they don't build through formal networking. They build through reliability — showing up, following through, and being honest when you don't know something.</p>
+
+  <h2>The Work Isn't Always Exciting</h2>
+
+  <p>There's a version of fintech that gets written about in TechCrunch — funding rounds, product launches, industry disruption. And then there's the version you actually experience — reconciling payment data at 9 PM, drafting the same investor update for the third time because the numbers changed, and debugging a Google Sheet formula that's breaking your entire workflow.</p>
+
+  <p>Both versions are real. The glamorous parts are real. The mundane parts are also real, and they take up more of your time than anyone admits. The trick is finding meaning in the mundane — understanding that the perfectly reconciled ledger is what makes the investor trust possible, which is what makes the deal flow possible, which is what makes the company work.</p>
+
+  <div class="section-break">◆ ◆ ◆</div>
+
+  <p>If I could tell my pre-job self one thing, it would be this: don't wait to feel ready. You won't feel ready for the first call, the first investor query, the first ops crisis. You do it anyway, learn from it, and feel slightly more ready the next time. That's the loop. It doesn't end — it just gets more interesting.</p>
+
+  <p style="font-size:14px;color:var(--muted);text-align:center;margin-top:40px;font-style:italic;">Manoj Sharvesh M writes about fintech, alternative investments, and the systems that make finance work. Based in Chennai.</p>
+
+</article>
+<footer class="article-footer">
+  <div class="footer-tags">
+    <span class="footer-tag">#Career</span><span class="footer-tag">#Fintech</span><span class="footer-tag">#EarlyCareer</span><span class="footer-tag">#Startups</span><span class="footer-tag">#Reflections</span>
+  </div>
+  <span class="reading-time">4 min read</span>
+</footer>
+</body>
+</html>
