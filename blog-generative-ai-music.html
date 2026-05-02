@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generative AI in Music: Who Owns the Sound? | Manoj Sharvesh M</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a1712;--paper:#faf6f0;--accent:#c45d2c;--accent-glow:#e8713a;--muted:#8a7e6e;--divider:#d6cdbf;--highlight:#fff3e0;--tag-bg:#2d2520;--tag-text:#f0e6d8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;line-height:1.78;font-size:18px;-webkit-font-smoothing:antialiased}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:flex-end;padding:6vw 8vw 8vw;position:relative;overflow:hidden;background:linear-gradient(165deg,#1a1712 0%,#2d2520 40%,#3e2f24 100%)}
+.hero::before{content:'';position:absolute;top:-30%;right:-20%;width:80vw;height:80vw;border-radius:50%;background:radial-gradient(circle,rgba(196,93,44,0.15) 0%,transparent 70%);animation:pulse 8s ease-in-out infinite}
+.hero::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.05);opacity:1}}
+.hero-meta{position:relative;z-index:2;display:flex;align-items:center;gap:16px;margin-bottom:28px;animation:fadeUp .8s ease both .2s}
+.hero-tag{background:var(--accent);color:#fff;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:3px}
+.hero-date{color:rgba(255,255,255,.45);font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px}
+.hero h1{position:relative;z-index:2;font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(2.4rem,5vw,4.2rem);line-height:1.1;color:#fff;max-width:780px;animation:fadeUp .8s ease both .4s}
+.hero h1 em{color:var(--accent-glow);font-style:italic}
+.hero-sub{position:relative;z-index:2;margin-top:24px;font-size:1.1rem;color:rgba(255,255,255,.5);max-width:560px;font-weight:300;animation:fadeUp .8s ease both .6s}
+.hero-author{position:relative;z-index:2;margin-top:36px;display:flex;align-items:center;gap:14px;animation:fadeUp .8s ease both .8s}
+.author-avatar{width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.15)}
+.author-avatar img{width:100%;height:100%;object-fit:cover}
+.author-info{color:rgba(255,255,255,.7);font-size:14px}
+.author-info strong{color:#fff;font-weight:600;display:block;font-size:15px}
+.author-info span{font-size:12px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;letter-spacing:.5px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.article-body{max-width:700px;margin:0 auto;padding:68px 24px 100px}
+.article-body h2{font-family:'Playfair Display',serif;font-weight:700;font-size:1.8rem;margin-top:52px;margin-bottom:18px;line-height:1.2;position:relative;padding-left:22px}
+.article-body h2::before{content:'';position:absolute;left:0;top:6px;width:4px;height:26px;background:var(--accent);border-radius:2px}
+.article-body p{margin-bottom:20px;font-weight:400}
+.article-body p:first-of-type::first-letter{font-family:'Playfair Display',serif;font-size:4rem;float:left;line-height:.8;margin-right:10px;margin-top:6px;color:var(--accent);font-weight:900}
+.pullquote{margin:44px -20px;padding:30px 34px;border-left:4px solid var(--accent);background:var(--highlight);font-family:'Playfair Display',serif;font-size:1.3rem;font-style:italic;line-height:1.5;color:#3a3024;border-radius:0 8px 8px 0;position:relative}
+.pullquote::before{content:'"';font-size:5rem;color:var(--accent);opacity:.2;position:absolute;top:-10px;left:16px;font-family:'Playfair Display',serif}
+.section-break{text-align:center;margin:48px 0;font-size:20px;letter-spacing:16px;color:var(--divider)}
+.back-link{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-bottom:40px;transition:color .2s}
+.back-link:hover{color:var(--accent)}
+.article-footer{max-width:700px;margin:0 auto;padding:0 24px 60px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--divider);padding-top:24px;flex-wrap:wrap;gap:16px}
+.footer-tags{display:flex;gap:8px;flex-wrap:wrap}
+.footer-tag{background:transparent;border:1px solid var(--divider);color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:11px;padding:5px 12px;border-radius:20px;letter-spacing:.5px}
+.reading-time{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:.5px}
+@media(max-width:640px){.hero{padding:8vw 6vw 10vw;min-height:75vh}.article-body{padding:44px 20px 72px}.pullquote{margin:36px 0;padding:24px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-meta">
+    <span class="hero-tag">AI × Music</span>
+    <span class="hero-date">MAY 2026</span>
+  </div>
+  <h1>Generative AI in Music:<br><em>Who Owns the Sound?</em></h1>
+  <p class="hero-sub">Suno just raised $250 million. Spotify is building AI tools with major labels. UNESCO warns of 24% revenue loss for creators. As someone who makes music and works in fintech, I have questions.</p>
+  <div class="hero-author">
+    <div class="author-avatar"><img src="photo.png" alt="Manoj Sharvesh M"></div>
+    <div class="author-info">
+      <strong>Manoj Sharvesh M</strong>
+      <span>Asset Operations · BetterInvest, Chennai</span>
+    </div>
+  </div>
+</header>
+<article class="article-body">
+  <a href="index.html" class="back-link">← Back to home</a>
+
+  <p>There's a strange irony in my life right now. By day, I work in fintech — managing asset operations, tracking disbursements, building systems that move money efficiently. By night, I sit at a piano, write songs, and try to turn feelings into melodies. These two worlds didn't used to overlap. In 2026, they collide violently — because generative AI is doing to music what fintech did to banking. And as someone who lives in both worlds, I'm not sure how I feel about it.</p>
+
+  <p>Suno, the Cambridge-based AI music startup, just closed a $250 million Series C at a $2.45 billion valuation. According to leaked investor materials, the platform generates a Spotify catalog's worth of music every two weeks. Let that sink in. Every two weeks, a single company creates as much music as the entire history of recorded sound on Spotify. And Suno isn't alone — Udio, ElevenLabs, and Soundverse are all scaling rapidly.</p>
+
+  <h2>The Democratization Argument</h2>
+
+  <p>The optimistic pitch is compelling: AI democratizes music creation the way smartphones democratized photography. Anyone can now create a full song — lyrics, melody, arrangement, production — with a text prompt. No instruments required. No years of practice. No expensive studio time. For content creators who need background music, for indie game developers who can't afford composers, for small businesses that need a jingle — this is genuinely transformative.</p>
+
+  <p>And it's not just about generation from scratch. AI-assisted tools are helping working musicians in real ways: expanding arrangements, simulating orchestral sections, generating chord progression variations, prototyping ideas before committing to expensive studio sessions. These are productivity tools, not replacement tools — and many producers welcome them.</p>
+
+  <div class="pullquote">AI doesn't threaten the musician who plays to express something they've lived. It threatens the musician who plays to fill a slot in a content pipeline. The question is how much of the music economy is built on expression versus function.</div>
+
+  <h2>The Revenue Problem</h2>
+
+  <p>Here's where my fintech brain kicks in. UNESCO published a report warning that music creators face a 24% revenue loss by 2028 due to AI-driven disruption. That's not a theoretical risk — it's already happening in production music, stock libraries, and functional audio. When a brand can generate a custom jingle in 30 seconds for effectively zero cost, the freelance composer who used to charge ₹50,000 for that work is out of a gig.</p>
+
+  <p>The economics are brutal. Streaming already pays fractions of a paisa per play. Now flood the platform with AI-generated tracks — each one competing for the same algorithmic attention — and per-stream payouts drop further. Deezer's research shows that AI-generated content on streaming platforms is growing exponentially, and most of it is uploaded as if it were human-created, without any transparency or labeling.</p>
+
+  <p>This is fundamentally a financing problem. And financing problems are something I think about all day. In media asset financing, we verify that the content behind a receivable is real, that a human production team created it, that there's genuine creative and commercial value backing the investment. What happens when AI-generated content floods the same pipelines? How do you underwrite authenticity?</p>
+
+  <h2>The Copyright Minefield</h2>
+
+  <p>The legal landscape is a mess. Major labels — Universal, Sony, Warner — are suing AI companies for training on copyrighted music without licensing. At the same time, Universal's own chief digital officer acknowledged that the industry needs to work with AI rather than against it. Companies like SoundPatrol are building forensic AI tools that use audio fingerprinting and neural embeddings to detect when AI-generated music contains elements derived from copyrighted works.</p>
+
+  <p>Some early licensing deals are emerging. ElevenLabs partnered with Kobalt and Merlin to create licensed AI training datasets, opening a new revenue stream for artists who opt in. Spotify announced partnerships with major labels to develop AI tools. These are encouraging signals — but they represent a tiny fraction of the market. Most AI music generation still happens on unlicensed data.</p>
+
+  <h2>The Genre Question</h2>
+
+  <p>Not all music is equally vulnerable. A recent survey of music professionals found that EDM and mainstream pop are seen as most amenable to AI generation — pattern-heavy, production-driven, structurally predictable. At the other end, jazz, blues, and classical music are considered most resistant, because they depend on the subtlety of human interaction, improvisation, and emotional nuance that algorithms still can't replicate convincingly.</p>
+
+  <p>Hip-hop occupies an interesting middle ground. The genre centers the human performer in a way that's hard to replace — the voice, the lived experience, the cultural specificity. You can generate a beat with AI, but can you generate authenticity? Can an algorithm write from a place it's never been?</p>
+
+  <div class="section-break">◆ ◆ ◆</div>
+
+  <h2>What This Means for India's Music Economy</h2>
+
+  <p>India's music industry is at a unique inflection point. Regional content — Tamil, Telugu, Malayalam, Kannada — is growing faster than Hindi. Independent artists are building audiences on YouTube and Instagram without label support. Film music still drives a massive portion of revenue, but non-film independent music is the fastest-growing segment.</p>
+
+  <p>AI could accelerate both the opportunity and the threat. On one hand, independent artists in Tier 2 and Tier 3 cities can now produce professional-quality music without access to expensive studios. On the other, the same tools can flood platforms with AI-generated regional content that competes for the same listener attention and advertising revenue.</p>
+
+  <p>For platforms like BetterInvest that finance content production, this raises practical questions. If a production house uses AI to generate background scores or even entire tracks, does that change the value of the asset? Does it change the risk profile of the receivable? These aren't theoretical questions anymore — they're heading toward our deal pipeline.</p>
+
+  <h2>Where I Land</h2>
+
+  <p>I don't think AI will kill music. But I think it will kill a certain kind of music economy — the one built on volume, utility, and interchangeability. Stock music libraries, production music, background scores for corporate videos — these markets will be largely automated within a few years.</p>
+
+  <p>What survives — what always survives — is the music that comes from somewhere real. The song written at 2 AM because you couldn't sleep. The melody that captures something you couldn't say in words. The performance that makes a room go quiet. AI can generate sound, but it can't generate the lived experience behind the sound. Not yet, anyway.</p>
+
+  <p>As someone who sits at the intersection of finance and music, I think the most interesting question isn't whether AI can make music. It clearly can. The question is whether we'll build the economic and legal infrastructure to ensure that human creativity remains valued — not just sentimentally, but financially. That's a financing problem, a regulation problem, and a culture problem, all at once.</p>
+
+  <p>And those are exactly the kinds of problems worth thinking about.</p>
+
+  <p style="font-size:14px;color:var(--muted);text-align:center;margin-top:40px;font-style:italic;">Manoj Sharvesh M writes about fintech, alternative investments, and the systems that make finance work. He also makes music, plays piano, and occasionally overthinks things. Based in Chennai.</p>
+</article>
+<footer class="article-footer">
+  <div class="footer-tags">
+    <span class="footer-tag">#GenerativeAI</span>
+    <span class="footer-tag">#MusicIndustry</span>
+    <span class="footer-tag">#AIMusic</span>
+    <span class="footer-tag">#Fintech</span>
+    <span class="footer-tag">#Copyright</span>
+  </div>
+  <span class="reading-time">8 min read</span>
+</footer>
+</body>
+</html>
